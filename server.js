@@ -62,7 +62,7 @@ app.all('/api/:endpoint', async (req, res) => {
       // Algo aconteceu na configuração do pedido que disparou um erro
       console.log('Error', error.message);
     }
-    res.status(500).json({ error: 'Pedrin da massa' });
+    res.status(500).json({ error: 'Erro 500' });
   }
 });
 
