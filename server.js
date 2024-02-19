@@ -20,7 +20,7 @@ app.use(bodyParser.json()); // Adiciona o body-parser ao middleware para interpr
 app.all('/api/:endpoint', async (req, res) => {
   try {
     const apiKey = process.env.API_KEY;
-    const baseUrl = 'https://brasilbitcoin.com.br/caas/sandbox';
+    const baseUrl = 'https://brasilbitcoin.com.br/caas/';
 
     const { endpoint } = req.params;
     const apiEndpoint = baseUrl + endpoint;
@@ -62,7 +62,7 @@ app.all('/api/:endpoint', async (req, res) => {
       // Algo aconteceu na configuração do pedido que disparou um erro
       console.log('Error', error.message);
     }
-    res.status(500).json({ error: 'Erro 500' });
+    res.status(500).json({ error: 'Pedrin da massa' });
   }
 });
 
